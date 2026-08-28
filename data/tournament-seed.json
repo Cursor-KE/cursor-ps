@@ -1,0 +1,344 @@
+{
+  "status": "live",
+  "selectedIds": [
+    "walk-9e9baaa6-4528-498f-9c38-2fc72618c703",
+    "walk-99580229-a888-48e8-9ce5-cf98e5f1bef8",
+    "walk-8411b776-83e6-4412-973e-2019a8f16bf9",
+    "walk-fe0dae7e-8b23-46b1-b828-9843249addce",
+    "walk-a307856f-8e05-4d10-98eb-2bb104e25ad0",
+    "walk-2e20bd6d-05da-41a0-bfb6-2be54d8a3115",
+    "walk-4206ed5c-5837-477d-873e-013b17590fed",
+    "walk-1aed4653-2239-4f41-8206-9b69f150a2cc",
+    "walk-98d07da9-f91b-40b5-9fb0-3332c7c40c7f",
+    "walk-4d372f6f-e892-41b6-a779-7f7e380a3d16",
+    "walk-e362327f-a3ce-4fd8-9208-ad483c88c342",
+    "walk-a539f3ec-f475-4ed3-a265-808be0018002",
+    "walk-a3786a19-e446-4ea8-968b-b0a9c984703b",
+    "walk-16db794d-2287-4d0f-a080-36c066bf7afc",
+    "walk-9c7df4d9-f99a-4fd6-8150-e6a274441241",
+    "gst-TPboQfcuG1sXLXN"
+  ],
+  "extras": [
+    {
+      "id": "walk-9e9baaa6-4528-498f-9c38-2fc72618c703",
+      "name": "masila",
+      "email": "",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-99580229-a888-48e8-9ce5-cf98e5f1bef8",
+      "name": "kevin",
+      "email": "munkev001@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-8411b776-83e6-4412-973e-2019a8f16bf9",
+      "name": "Joseph",
+      "email": "yonkokilasi@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-fe0dae7e-8b23-46b1-b828-9843249addce",
+      "name": "Abdirahman Farah",
+      "email": "abdirahman.hudayfa@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-a307856f-8e05-4d10-98eb-2bb104e25ad0",
+      "name": "oft",
+      "email": "ofwi1tiherman@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-2e20bd6d-05da-41a0-bfb6-2be54d8a3115",
+      "name": "Gilbert",
+      "email": "elberto@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-4206ed5c-5837-477d-873e-013b17590fed",
+      "name": "Griffins",
+      "email": "griplay9143@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-1aed4653-2239-4f41-8206-9b69f150a2cc",
+      "name": "yogart",
+      "email": "roberthook251@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-98d07da9-f91b-40b5-9fb0-3332c7c40c7f",
+      "name": "Frank",
+      "email": "franklynnes23@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-4d372f6f-e892-41b6-a779-7f7e380a3d16",
+      "name": "Mark",
+      "email": "mburumark@096.gmail",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-e362327f-a3ce-4fd8-9208-ad483c88c342",
+      "name": "Ryan Wanjie",
+      "email": "wanjieryan83@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-a539f3ec-f475-4ed3-a265-808be0018002",
+      "name": "nutcase",
+      "email": "mauricee423@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-a3786a19-e446-4ea8-968b-b0a9c984703b",
+      "name": "David Ouma",
+      "email": "daviddage438@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-16db794d-2287-4d0f-a080-36c066bf7afc",
+      "name": "Sean",
+      "email": "seanmotanya@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "id": "walk-9c7df4d9-f99a-4fd6-8150-e6a274441241",
+      "name": "Stekaa",
+      "email": "stephenkaruru05@gmail.com",
+      "checkedIn": true
+    }
+  ],
+  "matches": [
+    {
+      "id": "final-0",
+      "round": "final",
+      "slot": 0,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": null,
+      "nextSlot": null
+    },
+    {
+      "id": "qf-0",
+      "round": "qf",
+      "slot": 0,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "sf-0",
+      "nextSlot": "A"
+    },
+    {
+      "id": "qf-1",
+      "round": "qf",
+      "slot": 1,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "sf-0",
+      "nextSlot": "B"
+    },
+    {
+      "id": "qf-2",
+      "round": "qf",
+      "slot": 2,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "sf-1",
+      "nextSlot": "A"
+    },
+    {
+      "id": "qf-3",
+      "round": "qf",
+      "slot": 3,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "sf-1",
+      "nextSlot": "B"
+    },
+    {
+      "id": "r16-0",
+      "round": "r16",
+      "slot": 0,
+      "playerA": {
+        "id": "walk-a307856f-8e05-4d10-98eb-2bb104e25ad0",
+        "name": "oft"
+      },
+      "playerB": {
+        "id": "walk-99580229-a888-48e8-9ce5-cf98e5f1bef8",
+        "name": "kevin"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-0",
+      "nextSlot": "A"
+    },
+    {
+      "id": "r16-1",
+      "round": "r16",
+      "slot": 1,
+      "playerA": {
+        "id": "walk-1aed4653-2239-4f41-8206-9b69f150a2cc",
+        "name": "yogart"
+      },
+      "playerB": {
+        "id": "walk-fe0dae7e-8b23-46b1-b828-9843249addce",
+        "name": "Abdirahman Farah"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-0",
+      "nextSlot": "B"
+    },
+    {
+      "id": "r16-2",
+      "round": "r16",
+      "slot": 2,
+      "playerA": {
+        "id": "walk-8411b776-83e6-4412-973e-2019a8f16bf9",
+        "name": "Joseph"
+      },
+      "playerB": {
+        "id": "walk-e362327f-a3ce-4fd8-9208-ad483c88c342",
+        "name": "Ryan Wanjie"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-1",
+      "nextSlot": "A"
+    },
+    {
+      "id": "r16-3",
+      "round": "r16",
+      "slot": 3,
+      "playerA": {
+        "id": "walk-9c7df4d9-f99a-4fd6-8150-e6a274441241",
+        "name": "Stekaa"
+      },
+      "playerB": {
+        "id": "walk-98d07da9-f91b-40b5-9fb0-3332c7c40c7f",
+        "name": "Frank"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-1",
+      "nextSlot": "B"
+    },
+    {
+      "id": "r16-4",
+      "round": "r16",
+      "slot": 4,
+      "playerA": {
+        "id": "walk-2e20bd6d-05da-41a0-bfb6-2be54d8a3115",
+        "name": "Gilbert"
+      },
+      "playerB": {
+        "id": "gst-TPboQfcuG1sXLXN",
+        "name": "William Myles Awuonda"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-2",
+      "nextSlot": "A"
+    },
+    {
+      "id": "r16-5",
+      "round": "r16",
+      "slot": 5,
+      "playerA": {
+        "id": "walk-a539f3ec-f475-4ed3-a265-808be0018002",
+        "name": "nutcase"
+      },
+      "playerB": {
+        "id": "walk-4206ed5c-5837-477d-873e-013b17590fed",
+        "name": "Griffins"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-2",
+      "nextSlot": "B"
+    },
+    {
+      "id": "r16-6",
+      "round": "r16",
+      "slot": 6,
+      "playerA": {
+        "id": "walk-9e9baaa6-4528-498f-9c38-2fc72618c703",
+        "name": "masila"
+      },
+      "playerB": {
+        "id": "walk-4d372f6f-e892-41b6-a779-7f7e380a3d16",
+        "name": "Mark"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-3",
+      "nextSlot": "A"
+    },
+    {
+      "id": "r16-7",
+      "round": "r16",
+      "slot": 7,
+      "playerA": {
+        "id": "walk-16db794d-2287-4d0f-a080-36c066bf7afc",
+        "name": "Sean"
+      },
+      "playerB": {
+        "id": "walk-a3786a19-e446-4ea8-968b-b0a9c984703b",
+        "name": "David Ouma"
+      },
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "qf-3",
+      "nextSlot": "B"
+    },
+    {
+      "id": "sf-0",
+      "round": "sf",
+      "slot": 0,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "final-0",
+      "nextSlot": "A"
+    },
+    {
+      "id": "sf-1",
+      "round": "sf",
+      "slot": 1,
+      "playerA": null,
+      "playerB": null,
+      "scoreA": null,
+      "scoreB": null,
+      "winnerId": null,
+      "nextMatchId": "final-0",
+      "nextSlot": "B"
+    }
+  ],
+  "updatedAt": "2026-08-28T23:12:23.176Z"
+}

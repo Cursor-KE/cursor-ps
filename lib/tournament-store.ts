@@ -1,11 +1,14 @@
 import "server-only"
 import { readFile } from "node:fs/promises"
 import path from "node:path"
+import { get, put } from "@vercel/blob"
 import { emptyTournament } from "@/lib/bracket"
 import { getDb } from "@/lib/db"
+import seedData from "@/data/tournament-seed.json"
 import type { Guest, Match, MatchSlot, Player, RoundId, Tournament, TournamentStatus } from "@/lib/types"
 
 const jsonStorePath = path.join(process.cwd(), "data", "tournament.json")
+const blobPath = "tournament.json"
 
 type MetaRow = {
   status: string
@@ -98,6 +101,67 @@ function toMatch(row: MatchRow): Match {
   }
 }
 
+function useRemoteStore(): boolean {
+  return Boolean(process.env.VERCEL || process.env.BLOB_READ_WRITE_TOKEN)
+}
+
+function seedTournament(): Tournament {
+  if (!isTournament(seedData)) {
+    return emptyTournament()
+  }
+
+  return {
+    ...seedData,
+    extras: seedData.extras ?? [],
+  }
+}
+
+function stamp(tournament: Tournament): Tournament {
+  return {
+    ...tournament,
+    extras: tournament.extras ?? [],
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+async function persistBlob(tournament: Tournament): Promise<Tournament> {
+  const next = stamp(tournament)
+  await put(blobPath, JSON.stringify(next), {
+    access: "private",
+    allowOverwrite: true,
+    addRandomSuffix: false,
+    contentType: "application/json",
+    cacheControlMaxAge: 60,
+  })
+  return next
+}
+
+async function readFromBlob(): Promise<Tournament> {
+  const result = await get(blobPath, { access: "private", useCache: false })
+  if (!result) {
+    return persistBlob(seedTournament())
+  }
+
+  switch (result.statusCode) {
+    case 200: {
+      const parsed: unknown = JSON.parse(await new Response(result.stream).text())
+      if (!isTournament(parsed)) {
+        return persistBlob(seedTournament())
+      }
+      return {
+        ...parsed,
+        extras: parsed.extras ?? [],
+      }
+    }
+    case 304:
+      return seedTournament()
+    default: {
+      const _exhaustive: never = result
+      return _exhaustive
+    }
+  }
+}
+
 function readFromDb(): Tournament | null {
   const db = getDb()
   const meta = db.prepare("SELECT status, updated_at FROM meta WHERE id = 1").get() as MetaRow | undefined
@@ -120,13 +184,8 @@ function readFromDb(): Tournament | null {
   }
 }
 
-function persist(tournament: Tournament): Tournament {
-  const next: Tournament = {
-    ...tournament,
-    extras: tournament.extras ?? [],
-    updatedAt: new Date().toISOString(),
-  }
-
+function persistSqlite(tournament: Tournament): Tournament {
+  const next = stamp(tournament)
   const db = getDb()
   const write = db.transaction(() => {
     db.prepare(
@@ -213,21 +272,25 @@ async function migrateFromJson(): Promise<Tournament> {
     const raw = await readFile(jsonStorePath, "utf8")
     const parsed: unknown = JSON.parse(raw)
     if (!isTournament(parsed)) {
-      return persist(emptyTournament())
+      return persistSqlite(emptyTournament())
     }
 
-    return persist(
+    return persistSqlite(
       withSeededSelection({
         ...parsed,
         extras: Array.isArray(parsed.extras) ? parsed.extras : [],
       })
     )
   } catch {
-    return persist(emptyTournament())
+    return persistSqlite(emptyTournament())
   }
 }
 
 export async function readTournament(): Promise<Tournament> {
+  if (useRemoteStore()) {
+    return readFromBlob()
+  }
+
   const existing = readFromDb()
   if (existing) {
     return existing
@@ -236,5 +299,8 @@ export async function readTournament(): Promise<Tournament> {
 }
 
 export async function writeTournament(tournament: Tournament): Promise<Tournament> {
-  return persist(tournament)
+  if (useRemoteStore()) {
+    return persistBlob(tournament)
+  }
+  return persistSqlite(tournament)
 }
